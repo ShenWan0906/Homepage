@@ -6,9 +6,9 @@
 [![Tailwind CSS](https://img.shields.io/badge/Style-Tailwind_CSS-38bdf8?style=flat-square&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.style=flat-square)](https://opensource.org/licenses/MIT)
 
-**光影浮生** 是一个基于 `Astro` + `Tailwind CSS` 构建的极简摄影作品展示画廊。作为 [项目经理的浮生绘记](https://shenwan.life) 的数字子站，它剥离了所有冗余的社交元素，采用类似“暗房”的沉浸式深色设计，将视觉焦点完全还给影像本身。
+**光影浮生** 是一个基于 `Astro` + `Tailwind CSS` 构建的极简摄影作品展示画廊。作为 [项目经理的浮生绘记](http://shenwan.life) 的数字子站，它剥离了所有冗余的社交元素，采用类似“暗房”的沉浸式深色设计，将视觉焦点完全还给影像本身。
 
-🔗 **[点击这里，在线预览我的光影集](https://shenwan.life/gallery/)**
+🔗 **[点击这里，在线预览我的光影集](http://shenwan.life/gallery/)**
 
 ---
 
