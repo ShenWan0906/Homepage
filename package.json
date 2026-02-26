@@ -3,15 +3,11 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "npm run prebuild && astro dev",
-    "start": "npm run prebuild && astro dev",
+    "dev": "astro dev",
+    "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro",
-
-    "prebuild": "node build/prebuild",
-    "fontmin": "node build/fontmin",
-    "postbuild": "npm run fontmin && node build/postbuild"
+    "astro": "astro"
   },
   "dependencies": {
     "@astrojs/check": "^0.7.0",

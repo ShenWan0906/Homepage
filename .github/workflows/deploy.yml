@@ -1,0 +1,38 @@
+name: Deploy Gallery to Server
+
+on:
+  push:
+    branches:
+      - main  # ⚠️ 注意：如果你的 GitHub 默认分支是 master，请把这里改成 master
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. 拉取代码
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # 2. 安装 Node 环境
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # 3. 安装依赖并构建 (从 yarn 切换为 npm)
+      - name: Install and Build
+        run: |
+          npm install
+          npm run build
+
+      # 4. 把 dist 文件夹传送到你的服务器
+      - name: Deploy to Server
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          source: "dist/*"         # 只传构建好的 dist 文件夹
+          target: "/www/Homepage/" # 👇 修改为摄影项目的服务器目录
+          strip_components: 1      # 去掉 dist 这一层目录，直接把内容甩进去

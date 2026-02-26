@@ -5,12 +5,10 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   integrations: [tailwind()],
 
-  // dev mode
-  // site: 'http://localhost:4321'
+  // 👇 1. 修改为你的真实主站域名（用于生成正确的绝对链接和 SEO sitemap）
+  site: 'http://shenwan.life',
 
-  // production mode
-  site: 'https://image.idealclover.cn/projects/Homepage',
+  // 👇 2. 核心：配置基础路径。加上这个，打包出来的 CSS 和 JS 才会带上 /gallery/ 前缀
+  base: '/gallery',
 
-  // mode: 不同的网站 cn/top/moe
-  siteMode: "moe"
 });
