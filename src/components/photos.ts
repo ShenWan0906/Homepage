@@ -18,7 +18,7 @@ export const photos: Photo[] = [
     exif: "Canon EOS 800D | f/8 | 1/500s | ISO 100",
     category: "风景",
     likes: 342,
-    date: "2020-08-15"
+    date: "2020-08-15" 
   },
   { 
     id: "p2",
